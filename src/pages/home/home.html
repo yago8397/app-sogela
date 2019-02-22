@@ -1,0 +1,25 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content padding >
+  <img src="https://png.pngtree.com/element_origin_min_pic/16/09/27/1057e9de1c951de.jpg" alt="">
+
+  <h3>LOGIN</h3>
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input type="text" #usuario></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" #senha></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button block (click)="login()">ENTRAR</button>
+  <button ion-button block outline (click)="cadastro()">REGISTRAR</button>
+
+</ion-content>

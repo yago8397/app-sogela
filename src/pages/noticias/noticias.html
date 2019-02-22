@@ -1,0 +1,49 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Noticias</ion-title>
+    <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+    
+      <ion-card *ngFor="let p of noticias">
+
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="{{p.foto}}">
+          </ion-avatar>
+          <h2>{{p.name}}</h2>
+          <h3>{{p.titulo}}</h3>
+        </ion-item>
+      
+        <img src="{{p.image}}">
+      
+        <ion-card-content>
+          <p>{{p.texto}}</p>
+        </ion-card-content>
+        
+        <ion-row>
+          <ion-col text-center>
+            <button ion-button icon-start clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>Curtir</div>
+            </button>
+          </ion-col>
+          
+          <ion-col text-center>
+              <button ion-button icon-start clear small>
+                <ion-icon name="repeat"></ion-icon>
+                <div>Compartilhar</div>
+              </button>
+            </ion-col>
+        </ion-row>
+        <ion-textarea placeholder="Comentarios"></ion-textarea>
+      
+      
+      </ion-card>
+</ion-content>
