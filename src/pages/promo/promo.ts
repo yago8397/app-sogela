@@ -25,7 +25,7 @@ export class PromoPage {
   formGroup: FormGroup;  //Armazena dados do formulário
                          //necessário import ReactiveFormsModule em app.module.ts
                          firestore = firebase.firestore();
-  promocao: Promo[] = []; //armazena mensagens
+  promocao: any[] = []; //armazena mensagens
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
