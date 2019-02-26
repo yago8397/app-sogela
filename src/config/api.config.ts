@@ -1,3 +1,3 @@
 export const APICONFIG = {
-    url: 'http://www.mocky.io/v2/5c6dcd6a3700003e5cfa35af'
+    url: 'http://www.mocky.io/v2/5c7086c13800002c003fcc81'
 }

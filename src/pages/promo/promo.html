@@ -1,0 +1,56 @@
+
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>PromoPage</ion-title>
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+        <ion-card *ngFor="let promo of promocao">
+
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="{{promo.logo}}">
+          </ion-avatar>
+          <h2>{{promo.nome}}</h2>
+          <h3>{{promo.descricao}}</h3>
+        </ion-item>
+      
+        <img src="{{promo.img}}">
+      
+        <ion-card-content>
+          <p>{{promo.local}}</p>
+        </ion-card-content>
+        
+        <ion-row>
+          <ion-col text-center>
+            <button ion-button icon-start clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>Curtir</div>
+            </button>
+          </ion-col>
+          
+          <ion-col text-center>
+              <button ion-button icon-start clear small>
+                <ion-icon name="repeat"></ion-icon>
+                <div>Compartilhar</div>
+              </button>
+            </ion-col>
+        </ion-row>
+        <ion-textarea placeholder="Comentarios"></ion-textarea>
+      
+      
+      </ion-card>
+              
+              
+
+</ion-content>
+
+

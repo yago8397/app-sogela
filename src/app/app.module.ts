@@ -13,7 +13,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { HttpClientModule } from '@angular/common/http';
 import { StorageService } from '../services/storage.service';
-import { NoticiaService } from "../services/NoticiaService";
+
 
 @NgModule({
   declarations: [
@@ -34,8 +34,7 @@ import { NoticiaService } from "../services/NoticiaService";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth,
-    StorageService,
-    NoticiaService
+    StorageService
   ]
 })
 export class AppModule {}
