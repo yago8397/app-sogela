@@ -25,7 +25,7 @@ export class PromoPage {
   formGroup: FormGroup;  //Armazena dados do formulário
                          //necessário import ReactiveFormsModule em app.module.ts
                          firestore = firebase.firestore();
-  promocao: any[] = []; //armazena mensagens
+  promocao: Promo[] = []; //armazena mensagens
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -48,13 +48,25 @@ export class PromoPage {
 
   getList(){
     var ref = firebase.firestore().collection('promo');
+
     ref.get().then(the=>{
       the.forEach(doc => {
-        this.promocao.push(doc.data());
         
+        //console.log(doc.data());
+        let obj = new Promo(doc.data());
+        obj.uid = doc.id;
+        this.promocao.push(obj);
+       
       })
+
+      console.log(this.promocao)
+      
     })
 
   }
+
+  detalhe(uid : Promo){
+    this.navCtrl.push('DetalhePage',{'uid' : uid});
+  }  
 
 }

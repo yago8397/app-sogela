@@ -26,6 +26,7 @@ export class MyApp {
       { title: 'Perfil', component: 'PerfilPage' },
       { title: 'Promoções', component: 'PromoPage' },
       { title: 'Sair', component: 'LogoffPage'}
+      
     ];
 
   }
