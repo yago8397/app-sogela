@@ -13,24 +13,40 @@
 
 <ion-content padding>
 
-        <ion-card *ngFor="let promo of promocao" (click)="detalhe(promo)">
+
+      <ion-card *ngFor="let promo of promocao" (click)="detalhe(promo)">
 
         <ion-item>
           <ion-avatar item-start>
             <img src="{{promo?.imgLoja}}">
           </ion-avatar>
-        
           <h2>{{promo?.titulo}}</h2>
-
+          
         </ion-item>
       
         <img src="{{promo?.imgCerveja}}">
       
         <ion-card-content>
-          
+          <p></p>
         </ion-card-content>
         
-       
+        <ion-row>
+          <ion-col text-center>
+            <button ion-button icon-start clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>Curtir</div>
+            </button>
+          </ion-col>
+          
+          <ion-col text-center>
+              <button ion-button icon-start clear small>
+                <ion-icon name="repeat"></ion-icon>
+                <div>Compartilhar</div>
+              </button>
+            </ion-col>
+        </ion-row>
+        <ion-textarea placeholder="Comentar"></ion-textarea>
+      
       
       </ion-card>
               
